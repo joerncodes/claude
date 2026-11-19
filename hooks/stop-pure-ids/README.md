@@ -11,9 +11,16 @@ Braucht nur `python3`.
 
 ## Installation durch den Agenten
 
-Sag Claude: „Installier den Stop-Hook aus diesem Ordner.“ Der Agent geht so vor:
+Sag Claude: „Installiere den Stop Hook von dieser URL: https://github.com/joerncodes/claude/tree/main/hooks/stop-pure-ids“
 
-1. `stop-pure-ids.py` aus diesem Ordner nach `~/.claude/hooks/stop-pure-ids` kopieren und ausführbar machen (`chmod +x`).
+Anweisung für den Agenten:
+
+1. Skript herunterladen und ausführbar machen:
+   ```sh
+   mkdir -p ~/.claude/hooks
+   curl -fsSL https://raw.githubusercontent.com/joerncodes/claude/main/hooks/stop-pure-ids/stop-pure-ids.py -o ~/.claude/hooks/stop-pure-ids
+   chmod +x ~/.claude/hooks/stop-pure-ids
+   ```
 2. In `~/.claude/settings.json` unter `hooks.Stop` diesen Eintrag ergänzen. Bestehende Hooks und Einstellungen bleiben unverändert; gibt es `hooks.Stop` schon, kommt der Eintrag dazu:
    ```json
    {
