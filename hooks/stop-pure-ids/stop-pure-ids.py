@@ -19,7 +19,7 @@ import sys
 ID = re.compile(
     r"(?<![\w/.-])"
     r"("
-    r"[A-Z]{1,3}-\d{1,3}[a-z]?"          # R-10, AC-3, M-012, Q-07
+    r"[A-Z]{1,5}(?:-[A-Z]{2,5})?-\d{1,6}[a-z]?"  # R-10, AC-3, Q-07, ABC-1234, KT-WOR-6365
     r"|[A-Z]{1,2}\d{1,2}(?:\.\d{1,2})*"  # F13, H3, N1, P4.1
     r")"
     r"(?![\w-]|\.\d)"
@@ -27,7 +27,7 @@ ID = re.compile(
 
 # Kürzel, die keine Doku-IDs sind
 ERLAUBT = re.compile(
-    r"^(UTF-8|ISO-\d+|MP3|MP4|S3|EC2|G2|A4|A3|A5|H\.264|Q[1-4]|KW\d+|IPV[46]|PHP\d+|ES\d+|CO2|K8)$",
+    r"^(UTF-\d+|ISO-\d+|SHA-\d+|AES-\d+|GPT-\d+|COVID-19|MP3|MP4|S3|EC2|G2|A4|A3|A5|H\.264|Q[1-4]|KW\d+|IPV[46]|PHP\d+|ES\d+|CO2|K8)$",
     re.I,
 )
 

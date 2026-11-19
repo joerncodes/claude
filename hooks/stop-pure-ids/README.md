@@ -2,9 +2,9 @@
 
 Claude schreibt gern „R-10 ist drin, F13 hängt noch“, ohne zu sagen, was das ist. Dieser Stop-Hook für Claude Code merkt nackte Doku-IDs in der Antwort und lässt Claude eine Tabelle „ID | Bedeutung“ nachschieben, ein Satz pro ID.
 
-- Gemeldet: Kürzel wie `R-10`, `AC-3`, `Q-07`, `F13`, `H3`, `P4.1`.
+- Gemeldet: Kürzel wie `R-10`, `AC-3`, `Q-07`, `F13`, `H3`, `P4.1` und Ticket-IDs wie `ABC-1234` oder `KT-WOR-6365`.
 - Erlaubt: die ID in Klammern hinter dem Klartext („CSV-Export (F13)“), in Code, URLs, Links und Überschriften.
-- Ausgenommen: UTF-8, MP4, S3, Q1–Q4, KW47 und ähnliche.
+- Ausgenommen: UTF-8, ISO-8601, SHA-256, GPT-4, MP4, S3, Q1–Q4, KW47 und ähnliche.
 - Blockiert höchstens einmal pro Antwort, keine Schleife.
 
 Braucht nur `python3`.
